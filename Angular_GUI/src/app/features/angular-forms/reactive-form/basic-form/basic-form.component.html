@@ -1,0 +1,180 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div class="form-group mb-3">
+    <label for="Username">Username:</label>
+    <input
+      type="text"
+      class="form-control form-control-sm form-control-sm"
+      id="Username"
+      formControlName="userName"
+    />
+
+    <div
+      *ngIf="
+        registrationForm.get('userName')?.invalid &&
+        registrationForm.get('userName')?.touched
+      "
+    >
+      <small *ngIf="registrationForm.get('userName')?.errors?.['required']"
+        >Username is required!</small
+      >
+      <small *ngIf="registrationForm.get('userName')?.errors?.['minlength']"
+        >Username should be at least 3 character long!</small
+      >
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      class="form-control form-control-sm"
+      id="email"
+      formControlName="email"
+    />
+
+    <div
+      *ngIf="
+        registrationForm.get('email')?.invalid &&
+        registrationForm.get('email')?.touched
+      "
+    >
+      <small *ngIf="registrationForm.get('email')?.errors?.['required']"
+        >Email is required!</small
+      >
+      <small *ngIf="registrationForm.get('email')?.errors?.['email']"
+        >Enter a valid email!</small
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="form-group mb-3 mt-3" formGroupName="address">
+    <label for="address">Address:</label>
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="street">street:</label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            id="street"
+            formControlName="street"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="city">city:</label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            id="city"
+            formControlName="city"
+          />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="state">state:</label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            id="state"
+            formControlName="state"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="zip">zip:</label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            id="zip"
+            formControlName="zip"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="form-group mb-3">
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      class="form-control form-control-sm"
+      id="password"
+      formControlName="password"
+    />
+
+    <div
+      *ngIf="
+        registrationForm.get('password')?.invalid &&
+        registrationForm.get('password')?.touched
+      "
+    >
+      <small *ngIf="registrationForm.get('password')?.errors?.['required']"
+        >password is required!</small
+      >
+      <small *ngIf="registrationForm.get('password')?.errors?.['minlength']"
+        >Password must be at least 6 characters long.</small
+      >
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="confirmPassword">Confirm Password</label>
+    <input
+      id="confirmPassword"
+      type="password"
+      class="form-control form-control-sm"
+      formControlName="confirmPassword"
+    />
+    <div
+      *ngIf="
+        registrationForm.get('confirmPassword')?.invalid &&
+        registrationForm.get('confirmPassword')?.touched
+      "
+    >
+      <small
+        *ngIf="registrationForm.get('confirmPassword')?.errors?.['required']"
+        >Confirm Password is required.</small
+      >
+    </div>
+    <div
+      *ngIf="registrationForm.errors?.['mismatch'] && (registrationForm.get('confirmPassword')?.touched || registrationForm.get('confirmPassword')?.dirty)"
+    >
+      <small>Passwords do not match.</small>
+    </div>
+  </div>
+  <hr />
+  <div class="mb-3">
+    <label for="typeYourText" class="form-label">Type your message</label>
+    <textarea
+      formControlName="typeYourText"
+      class="form-control"
+      id="typeYourText"
+      rows="3"
+    ></textarea>
+    <div
+      *ngIf="
+        registrationForm.get('typeYourText')?.invalid &&
+        registrationForm.get('typeYourText')?.touched
+      "
+    >
+      <small *ngIf="registrationForm.get('typeYourText')?.errors?.['required']"
+        >Fiels is required!</small
+      >
+      <small *ngIf="registrationForm.get('typeYourText')?.errors?.['minlength']"
+        >Comments must be at least 10 characters long.</small
+      >
+    </div>
+  </div>
+  <select
+    class="form-select form-select-sm"
+    aria-label=".form-select-sm example"
+    formControlName="gender"
+  >
+    <option value="" disabled>Select Gender</option>
+    <option value="male">One</option>
+    <option value="female">Two</option>
+    <option value="others">Three</option>
+  </select>
+  <div class="d-grid">
+    <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+  </div>
+</form>

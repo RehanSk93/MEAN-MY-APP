@@ -1,0 +1,15 @@
+.special {
+  margin: 20px;
+}
+.btn-group.special {
+  display: flex;
+}
+
+.special .btn {
+  flex: 1;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
