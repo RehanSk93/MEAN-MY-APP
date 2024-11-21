@@ -7,6 +7,8 @@ import { ReactiveFormComponent } from './features/angular-forms/reactive-form/re
 import { TemplateDrivenFormComponent } from './features/angular-forms/template-driven-form/template-driven-form.component';
 import { AngularPipesComponent } from './features/angular-pipes/angular-pipes.component';
 import { AngularDirectivesComponent } from './features/angular-directives/angular-directives.component';
+import { AngularCrudAppComponent } from './features/angular-crud-app/angular-crud-app.component';
+import { NodeBackendComponent } from './features/angular-crud-app/node-backend/node-backend.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,9 +26,18 @@ const routes: Routes = [
       },
     ],
   },
-  {path: 'angular-pipes', component: AngularPipesComponent},
-  {path: 'angular-directives', component: AngularDirectivesComponent},
-  { path: 'feature', component: FeaturesComponent },
+  { path: 'angular-pipes', component: AngularPipesComponent },
+  { path: 'angular-directives', component: AngularDirectivesComponent },
+  {
+    path: 'angular-crud-app',
+    component: AngularCrudAppComponent,
+    children: [
+      {
+        path: 'node-backend',
+        component: NodeBackendComponent,
+      },
+    ],
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

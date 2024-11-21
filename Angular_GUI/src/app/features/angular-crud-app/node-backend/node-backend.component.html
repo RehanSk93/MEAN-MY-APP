@@ -1,0 +1,92 @@
+<form class="row g-3" [formGroup]="userDetails" (ngSubmit)="onSubmit()">
+  <div class="col-md-6">
+    <label for="username" class="form-label">Username</label>
+    <input
+      type="text"
+      class="form-control"
+      id="username"
+      formControlName="username"
+    />
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="inputEmail4"
+      formControlName="email"
+    />
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputAddress"
+      formControlName="address"
+      placeholder="1234 Main St"
+    />
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">City</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputCity"
+      formControlName="city"
+    />
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select" formControlName="state">
+      <option value="" disabled selected>Select State</option>
+      <option value="westbengal">West Bengal</option>
+      <option value="maharastra">Maharastra</option>
+      <option value="delhi">Delhi</option>
+      <option value="up">UP</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputZip"
+      formControlName="zip"
+    />
+  </div>
+  <div class="col-12 d-grid gap-2">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+<br />
+<hr />
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">SL No</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Zip Code</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Rehan Sk</td>
+      <td>rehan&#64;gmail.com</td>
+      <td>Madpur</td>
+      <td>Kolkata</td>
+      <td>West Bengal</td>
+      <td>721149</td>
+      <td><i style="font-size: 24px" class="fa">&#xf044;</i></td>
+      <td><i style="font-size: 24px" class="fa">&#xf014;</i></td>
+    </tr>
+  </tbody>
+</table>
