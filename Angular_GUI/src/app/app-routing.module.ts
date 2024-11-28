@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FeaturesComponent } from './shared/components/features/features.component';
 import { HomeComponent } from './shared/components/home/home.component';
 import { AngularFormsComponent } from './features/angular-forms/angular-forms.component';
 import { ReactiveFormComponent } from './features/angular-forms/reactive-form/reactive-form.component';

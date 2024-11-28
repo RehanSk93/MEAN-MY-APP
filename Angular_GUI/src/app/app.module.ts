@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeComponent } from './shared/components/home/home.component';
-import { FeaturesComponent } from './shared/components/features/features.component';
 import { AngularFormsComponent } from './features/angular-forms/angular-forms.component';
 import { ReactiveFormComponent } from './features/angular-forms/reactive-form/reactive-form.component';
 import { TemplateDrivenFormComponent } from './features/angular-forms/template-driven-form/template-driven-form.component';
@@ -26,7 +25,6 @@ import { NodeBackendComponent } from './features/angular-crud-app/node-backend/n
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    FeaturesComponent,
     AngularFormsComponent,
     ReactiveFormComponent,
     TemplateDrivenFormComponent,
