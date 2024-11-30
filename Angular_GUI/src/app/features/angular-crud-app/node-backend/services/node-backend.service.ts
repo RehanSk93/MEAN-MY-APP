@@ -1,20 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import {userLists} from './api-const'
 
 @Injectable({
   providedIn: 'root',
 })
 export class NodeBackendService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+  private apiUrl = userLists;
 
   constructor(private http: HttpClient) {}
 
   getUserList(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+    return this.http.get<any[]>(this.apiUrl);
   }
 
-  addUser(userDetails: any): Observable<any> {
+  createUser(userDetails: any): Observable<any> {
     return this.http.post<any>(this.apiUrl, userDetails);
   }
 

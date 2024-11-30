@@ -10,6 +10,7 @@ import { NodeBackendService } from './services/node-backend.service';
 export class NodeBackendComponent implements OnInit {
   userList: any[] = [];
   userDetails: FormGroup;
+  isEditMode: boolean = false;
 
   constructor(private nodeBackend: NodeBackendService) {
     this.userDetails = new FormGroup({
@@ -26,6 +27,12 @@ export class NodeBackendComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getUserList();
+    console.log(this.isEditMode);
+    
+  }
+
+  getUserList() {
     this.nodeBackend.getUserList().subscribe(
       (data) => {
         this.userList = data;
@@ -37,7 +44,36 @@ export class NodeBackendComponent implements OnInit {
     );
   }
 
-  onSubmit() {
-    console.log(this.userDetails.value);
+  onSubmit(): void {
+    if (this.isEditMode) {
+      this.updateUser();
+    } else {
+      this.addUser();
+    }
+  }
+
+  addUser() {
+    this.nodeBackend.createUser(this.userDetails.value).subscribe(
+      (res) => {
+        this.userDetails.reset();
+        this.getUserList();
+        console.log(res);
+      },
+      (err) => {
+        console.log('Add User',err);
+      }
+    );
+  }
+
+  updateUser() {
+    this.nodeBackend.updateUserDetails(this.userDetails.value, this.userDetails)
+  }
+
+  userEdit(user: any) {
+    this.isEditMode = true;
+    this.userDetails.patchValue(user);
+  }
+  userDelete(userID: any) {
+    console.log(userID);
   }
 }

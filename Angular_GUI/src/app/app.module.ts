@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeComponent } from './shared/components/home/home.component';
 import { AngularFormsComponent } from './features/angular-forms/angular-forms.component';
 import { ReactiveFormComponent } from './features/angular-forms/reactive-form/reactive-form.component';
@@ -23,7 +22,6 @@ import { NodeBackendComponent } from './features/angular-crud-app/node-backend/n
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     HomeComponent,
     AngularFormsComponent,
     ReactiveFormComponent,

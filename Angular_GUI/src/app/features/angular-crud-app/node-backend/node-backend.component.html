@@ -56,13 +56,13 @@
     />
   </div>
   <div class="col-12 d-grid gap-2">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </div>
 </form>
 <br />
 <hr />
 
-<table class="table table-striped">
+<table class="table table-striped border">
   <thead>
     <tr>
       <th scope="col">SL No</th>
@@ -77,16 +77,26 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Rehan Sk</td>
-      <td>rehan&#64;gmail.com</td>
-      <td>Madpur</td>
-      <td>Kolkata</td>
-      <td>West Bengal</td>
-      <td>721149</td>
-      <td><i style="font-size: 24px" class="fa">&#xf044;</i></td>
-      <td><i style="font-size: 24px" class="fa">&#xf014;</i></td>
+    <tr *ngFor="let user of userList; let i = index">
+      <th scope="row" style="text-align: center;">{{ i + 1 }}</th>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.address }}</td>
+      <td>{{ user.city }}</td>
+      <td>{{ user.state }}</td>
+      <td>{{ user.zip }}</td>
+      <td
+        (click)="userEdit(user)"
+        style="cursor: pointer; text-align: center; color:rgba(0, 0, 255, 0.482) ;"
+      >
+        <i style="font-size: 24px" class="fa">&#xf044;</i>
+      </td>
+      <td
+        (click)="userDelete(user._id)"
+        style="cursor: pointer; text-align: center; color: brown;"
+      >
+        <i style="font-size: 24px" class="fa">&#xf014;</i>
+      </td>
     </tr>
   </tbody>
 </table>
