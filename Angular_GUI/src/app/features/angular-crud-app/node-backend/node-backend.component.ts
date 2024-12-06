@@ -12,7 +12,7 @@ export class NodeBackendComponent implements OnInit {
   userDetails: FormGroup;
   isEditMode: boolean = false;
 
-  constructor(private nodeBackend: NodeBackendService) {
+  constructor(private nodeBackendService: NodeBackendService) {
     this.userDetails = new FormGroup({
       username: new FormControl('', [
         Validators.required,
@@ -28,15 +28,12 @@ export class NodeBackendComponent implements OnInit {
 
   ngOnInit() {
     this.getUserList();
-    console.log(this.isEditMode);
-    
   }
 
   getUserList() {
-    this.nodeBackend.getUserList().subscribe(
+    this.nodeBackendService.getUserList().subscribe(
       (data) => {
         this.userList = data;
-        console.log(this.userList);
       },
       (error) => {
         console.error('Error fetching posts', error);
@@ -53,27 +50,50 @@ export class NodeBackendComponent implements OnInit {
   }
 
   addUser() {
-    this.nodeBackend.createUser(this.userDetails.value).subscribe(
+    this.nodeBackendService.createUser(this.userDetails.value).subscribe(
       (res) => {
-        this.userDetails.reset();
+        this.userDetails.reset({ state: '' });
         this.getUserList();
-        console.log(res);
       },
       (err) => {
-        console.log('Add User',err);
+        console.log('Add User', err);
       }
     );
   }
 
   updateUser() {
-    this.nodeBackend.updateUserDetails(this.userDetails.value, this.userDetails)
+    const _id = localStorage.getItem('UserID');
+    this.nodeBackendService
+      .updateUserDetails(_id, this.userDetails.value)
+      .subscribe(
+        (res) => {
+          this.userDetails.reset({ state: '' });
+          this.getUserList();
+        },
+        (err) => {
+          console.log('Error Occurs while update User', err);
+        }
+      );
   }
 
-  userEdit(user: any) {
+  userEditDetails(user: any) {
     this.isEditMode = true;
+    localStorage.setItem('UserID', user._id);
     this.userDetails.patchValue(user);
   }
-  userDelete(userID: any) {
-    console.log(userID);
+  userDetailsDelete(userID: any) {
+    let result = confirm('are you sure want to delete user!');
+    if (result) {
+      this.nodeBackendService.deleteUser(userID).subscribe(
+        (res) => {
+          if (res) {
+            this.getUserList();
+          }
+        },
+        (err) => {
+          console.log('Error Occurs while delete user', err);
+        }
+      );
+    }
   }
 }

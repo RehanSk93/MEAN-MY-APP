@@ -19,9 +19,12 @@ export class NodeBackendService {
     return this.http.post<any>(this.apiUrl, userDetails);
   }
 
-  updateUserDetails(userId: number, userDetails: any): Observable<any> {
-    const url = `${this.apiUrl}/${userId}`;
-    return this.http.put<any>(url, userDetails);
+  updateUserDetails(userId: any, userDetails: any): Observable<any> {
+    const _url = `${this.apiUrl}/${userId}`;
+    console.log('_URL', _url);
+    console.log('userDetails', userDetails);
+    
+    return this.http.patch<any>(_url, userDetails);
   }
 
   deleteUser(userId: number): Observable<any> {

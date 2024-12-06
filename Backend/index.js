@@ -1,7 +1,9 @@
+// Import Core Packages
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+// Import custom packages and pages
 const { connectMongoDB } = require("./dbCon");
 const MEAN_APP_ROUTER = require("./routes/mean_app");
 
