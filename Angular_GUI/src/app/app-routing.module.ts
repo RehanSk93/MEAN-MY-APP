@@ -8,6 +8,7 @@ import { AngularPipesComponent } from './features/angular-pipes/angular-pipes.co
 import { AngularDirectivesComponent } from './features/angular-directives/angular-directives.component';
 import { AngularCrudAppComponent } from './features/angular-crud-app/angular-crud-app.component';
 import { NodeBackendComponent } from './features/angular-crud-app/node-backend/node-backend.component';
+import { FormArrayComponent } from './features/angular-forms/form-array/form-array.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'template-driven-form',
         component: TemplateDrivenFormComponent,
+      },
+      {
+        path: 'form-array',
+        component: FormArrayComponent,
       },
     ],
   },

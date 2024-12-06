@@ -16,6 +16,7 @@ import { AngularPipesComponent } from './features/angular-pipes/angular-pipes.co
 import { AngularDirectivesComponent } from './features/angular-directives/angular-directives.component';
 import { AngularCrudAppComponent } from './features/angular-crud-app/angular-crud-app.component';
 import { NodeBackendComponent } from './features/angular-crud-app/node-backend/node-backend.component';
+import { FormArrayComponent } from './features/angular-forms/form-array/form-array.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { NodeBackendComponent } from './features/angular-crud-app/node-backend/n
     AngularDirectivesComponent,
     AngularCrudAppComponent,
     NodeBackendComponent,
+    FormArrayComponent,
   ],
   imports: [
     BrowserModule,
