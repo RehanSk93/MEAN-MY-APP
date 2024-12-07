@@ -2,3 +2,13 @@
   outline: none;
   box-shadow: none;
 }
+
+.accordion-button {
+  background-color: #6c757d; /* Change to your desired color */
+  color: white; /* Change text color */
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #6c757d; /* Change to your desired color */
+  color: white; /* Change text color */
+}

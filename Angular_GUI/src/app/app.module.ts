@@ -17,6 +17,7 @@ import { AngularDirectivesComponent } from './features/angular-directives/angula
 import { AngularCrudAppComponent } from './features/angular-crud-app/angular-crud-app.component';
 import { NodeBackendComponent } from './features/angular-crud-app/node-backend/node-backend.component';
 import { FormArrayComponent } from './features/angular-forms/form-array/form-array.component';
+import { BasicFormArrayComponent } from './features/angular-forms/form-array/basic-form-array/basic-form-array.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { FormArrayComponent } from './features/angular-forms/form-array/form-arr
     AngularCrudAppComponent,
     NodeBackendComponent,
     FormArrayComponent,
+    BasicFormArrayComponent,
   ],
   imports: [
     BrowserModule,

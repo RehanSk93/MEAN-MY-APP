@@ -1,0 +1,59 @@
+<form [formGroup]="basicFormArray" (ngSubmit)="onSubmit()">
+    <!-- Name -->
+    <div class="input-group input-group-sm mt-3">
+        <span class="input-group-text">Name</span>
+        <input type="text" formControlName="name" id="name" class="form-control" placeholder="Username">
+    </div>
+    <div *ngIf="basicFormArray.get('name')?.invalid && basicFormArray.get('name')?.touched">
+        <small *ngIf="basicFormArray.get('name')?.errors?.['required']"> Name is required! </small>
+        <small *ngIf="basicFormArray.get('name')?.errors?.['minlength']"> Name should be at least 3 character
+            long!</small>
+    </div>
+
+    <!-- Email -->
+    <div class="input-group input-group-sm mt-3">
+        <span class="input-group-text">Email</span>
+        <input type="email" formControlName="email" id="email" class="form-control" placeholder="Email">
+    </div>
+    <div *ngIf="basicFormArray.get('email')?.invalid && basicFormArray.get('email')?.touched">
+        <small *ngIf="basicFormArray.get('email')?.errors?.['required']">Email is required</small>
+        <small *ngIf="basicFormArray.get('email')?.errors?.['email']">Enter a valid email</small>
+    </div>
+
+    <!-- Address -->
+    <div class="input-group mt-3 input-group-sm" formGroupName="address">
+        <span class="input-group-text">Address</span>
+        <input type="text" formControlName="street" id="street" class="form-control" placeholder="street">
+        <input type="text" formControlName="city" id="city" class="form-control" placeholder="city">
+    </div>
+    <div *ngIf="basicFormArray.get('address.street')?.invalid && basicFormArray.get('address.street')?.touched">
+        <small *ngIf="basicFormArray.get('address.street')?.errors?.['required']">Street is required.</small>
+    </div>
+    <div *ngIf="basicFormArray.get('address.city')?.invalid && basicFormArray.get('address.city')?.touched">
+        <small *ngIf="basicFormArray.get('address.city')?.errors?.['required']">City is required.</small>
+    </div>
+
+    <!-- Add Multiple Phone number -->
+    <div formArrayName="phoneNumbers">
+        <ng-container *ngFor="let phone of phoneNumbers.controls; let i=index">
+            <div class="input-group mt-3 input-group-sm">
+                <input type="number" [id]="'phone' + i" [formControlName]="i" class="form-control"
+                    [placeholder]="'Phone Number ' + (i+1)">
+                <button class="btn btn-success" type="button" (click)="addPhoneNumber()">Add</button>
+                <button *ngIf="i >= 1" class="btn btn-danger" type="button"
+                    (click)="removePhoneNumber(i)">Remove</button>
+            </div>
+            <!-- Validation -->
+            <div *ngIf="phone.invalid && phone.touched">
+                <small *ngIf="phone.errors?.['required']">Phone number is required. </small>
+                <small *ngIf="phone.errors?.['invalidPhoneNumber']">Phone number must be 10 digits.</small>
+            </div>
+        </ng-container>
+    </div>
+
+
+    <!-- Save details -->
+    <div class="d-grid mt-4">
+        <button type="submit" class="btn btn-primary btn-block">Save</button>
+    </div>
+</form>
