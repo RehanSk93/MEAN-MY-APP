@@ -18,6 +18,8 @@ import { AngularCrudAppComponent } from './features/angular-crud-app/angular-cru
 import { NodeBackendComponent } from './features/angular-crud-app/node-backend/node-backend.component';
 import { FormArrayComponent } from './features/angular-forms/form-array/form-array.component';
 import { BasicFormArrayComponent } from './features/angular-forms/form-array/basic-form-array/basic-form-array.component';
+import { HowToComponent } from './shared/components/how-to/how-to.component';
+import { RxjsOperatorsComponent } from './shared/components/rxjs-operators/rxjs-operators.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { BasicFormArrayComponent } from './features/angular-forms/form-array/bas
     NodeBackendComponent,
     FormArrayComponent,
     BasicFormArrayComponent,
+    HowToComponent,
+    RxjsOperatorsComponent
   ],
   imports: [
     BrowserModule,
