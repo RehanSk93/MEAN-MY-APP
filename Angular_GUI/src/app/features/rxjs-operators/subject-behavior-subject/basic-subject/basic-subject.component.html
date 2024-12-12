@@ -1,1 +1,20 @@
-<p>basic-subject works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-child-one></app-child-one>
+        </div>
+        <div class="col-md-4">
+            <app-child-two></app-child-two>
+        </div>
+        <div class="col-md-4">
+            <app-child-three></app-child-three>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group mb-3 mt-3">
+            <input type="text" class="form-control" #myMessage placeholder="Type your message here.." aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+            <button class="btn btn-info" type="button" id="button-addon2" (click)="onEmitMessage(myMessage)">Emit your message</button>
+        </div>
+    </div>
+</div>

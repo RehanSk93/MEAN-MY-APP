@@ -23,6 +23,10 @@ import { BasicSubjectComponent } from './features/rxjs-operators/subject-behavio
 import { FormEventComponent } from './features/rxjs-operators/form-event/form-event.component';
 import { SubjectBehaviorSubjectComponent } from './features/rxjs-operators/subject-behavior-subject/subject-behavior-subject.component';
 import { HowToComponent } from './features/how-to/how-to.component';
+import { ChildOneComponent } from './features/rxjs-operators/subject-behavior-subject/basic-subject/child-one/child-one.component';
+import { ChildTwoComponent } from './features/rxjs-operators/subject-behavior-subject/basic-subject/child-two/child-two.component';
+import { ChildThreeComponent } from './features/rxjs-operators/subject-behavior-subject/basic-subject/child-three/child-three.component';
+import { RxjsBasicTheoryComponent } from './features/rxjs-operators/subject-behavior-subject/rxjs-basic-theory/rxjs-basic-theory.component';
 
 
 @NgModule({
@@ -44,7 +48,11 @@ import { HowToComponent } from './features/how-to/how-to.component';
     RxjsOperatorsComponent,
     FormEventComponent,
     SubjectBehaviorSubjectComponent,
-    BasicSubjectComponent
+    BasicSubjectComponent,
+    ChildOneComponent,
+    ChildTwoComponent,
+    ChildThreeComponent,
+    RxjsBasicTheoryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<div class="card mb-3">
+    <div class="card-header">What is a Subject?</div>
+    <div class="card-body">
+        <p>In RxJS, a Subject is a special type of Observable that allows values to be multicasted to multiple
+            Observers. Unlike a regular Observable, a Subject is also an Observer. <br> means you can subscribe to it
+            and also emit values through it, making it a powerful tool for event handling, inter-component
+            communication, and state management in Angular applications.</p>
+        <p><span style="font-weight: bold;">Multicasting:</span> A Subject allows multiple observers to listen to the
+            same Observable execution. When a value is emitted, all subscribers receive the value.</p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">Types of Subjects</div>
+    <div class="card-body">
+        <p><span style="font-weight: bold;">Multicasting:</span> A basic Subject that does not hold any values or have
+            any special behavior.</p>
+        <p><span style="font-weight: bold;">BehaviorSubject:</span> Stores the latest value emitted to its consumers and
+            immediately emits this value to new subscribers.</p>
+        <p><span style="font-weight: bold;">ReplaySubject:</span> Stores a specified number of previous values and emits
+            them to new subscribers.</p>
+        <p><span style="font-weight: bold;">AsyncSubject:</span> Emits the last value (and only the last value) to its
+            observers when the execution completes.</p>
+    </div>
+</div>
