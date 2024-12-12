@@ -10,12 +10,27 @@ import { AngularCrudAppComponent } from './features/angular-crud-app/angular-cru
 import { NodeBackendComponent } from './features/angular-crud-app/node-backend/node-backend.component';
 import { FormArrayComponent } from './features/angular-forms/form-array/form-array.component';
 import { HowToComponent } from './shared/components/how-to/how-to.component';
-import { RxjsOperatorsComponent } from './shared/components/rxjs-operators/rxjs-operators.component';
+import { RxjsOperatorsComponent } from './features/rxjs-operators/rxjs-operators.component';
+import { SubjectBehaviorSubjectComponent } from './features/rxjs-operators/subject-behavior-subject/subject-behavior-subject.component';
+import { FormEventComponent } from './features/rxjs-operators/form-event/form-event.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'how-to', component: HowToComponent },
-  { path: 'rxjs-operators', component: RxjsOperatorsComponent },
+  {
+    path: 'rxjs-operators',
+    component: RxjsOperatorsComponent,
+    children: [
+      {
+        path: 'subject-behaviorSubject',
+        component: SubjectBehaviorSubjectComponent,
+      },
+      {
+        path: 'form-event',
+        component: FormEventComponent,
+      },
+    ],
+  },
   {
     path: 'angular-forms',
     component: AngularFormsComponent,

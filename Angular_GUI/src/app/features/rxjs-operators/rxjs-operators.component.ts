@@ -9,6 +9,7 @@ import {
   takeUntil,
   timer,
 } from 'rxjs';
+import { RxjsService } from './services/rxjs.service';
 
 @Component({
   selector: 'app-rxjs-operators',
@@ -18,6 +19,10 @@ import {
 export class RxjsOperatorsComponent implements OnInit {
   arr1 = [1, 2, 3, 4, 5];
   arr2 = ['a', 'b', 'c', 'd', 'e'];
+
+  username$: string = '';
+
+  constructor(private rxjsService: RxjsService) {}
 
   ngOnInit() {
     // this.getObservableData(from(this.myObservable4));
@@ -29,8 +34,16 @@ export class RxjsOperatorsComponent implements OnInit {
     // this.myObservable8$.subscribe((val) => console.log(val));
     // this.myObservable9$.subscribe((val) => console.log(val));
     // this.callSubject();
+
+    this.rxjsService.getData().subscribe((res) => {
+      this.username$ = res;
+    });
   }
 
+  sendUsername(user: any) {
+    console.log(user.value);
+    this.rxjsService.setData(user.value);
+  }
   // ------------------------------------------------------------------------------
 
   // In RxJS, a Subject is a special type of Observable that allows values to be multicast to multiple Observers.

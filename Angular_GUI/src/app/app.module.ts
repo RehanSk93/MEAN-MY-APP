@@ -19,7 +19,10 @@ import { NodeBackendComponent } from './features/angular-crud-app/node-backend/n
 import { FormArrayComponent } from './features/angular-forms/form-array/form-array.component';
 import { BasicFormArrayComponent } from './features/angular-forms/form-array/basic-form-array/basic-form-array.component';
 import { HowToComponent } from './shared/components/how-to/how-to.component';
-import { RxjsOperatorsComponent } from './shared/components/rxjs-operators/rxjs-operators.component';
+import { RxjsOperatorsComponent } from './features/rxjs-operators/rxjs-operators.component';
+import { BasicSubjectComponent } from './features/rxjs-operators/subject-behavior-subject/basic-subject/basic-subject.component';
+import { FormEventComponent } from './features/rxjs-operators/form-event/form-event.component';
+import { SubjectBehaviorSubjectComponent } from './features/rxjs-operators/subject-behavior-subject/subject-behavior-subject.component';
 
 
 @NgModule({
@@ -38,7 +41,10 @@ import { RxjsOperatorsComponent } from './shared/components/rxjs-operators/rxjs-
     FormArrayComponent,
     BasicFormArrayComponent,
     HowToComponent,
-    RxjsOperatorsComponent
+    RxjsOperatorsComponent,
+    FormEventComponent,
+    SubjectBehaviorSubjectComponent,
+    BasicSubjectComponent
   ],
   imports: [
     BrowserModule,
