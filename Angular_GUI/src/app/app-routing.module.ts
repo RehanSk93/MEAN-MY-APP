@@ -9,10 +9,10 @@ import { AngularDirectivesComponent } from './features/angular-directives/angula
 import { AngularCrudAppComponent } from './features/angular-crud-app/angular-crud-app.component';
 import { NodeBackendComponent } from './features/angular-crud-app/node-backend/node-backend.component';
 import { FormArrayComponent } from './features/angular-forms/form-array/form-array.component';
-import { HowToComponent } from './shared/components/how-to/how-to.component';
 import { RxjsOperatorsComponent } from './features/rxjs-operators/rxjs-operators.component';
 import { SubjectBehaviorSubjectComponent } from './features/rxjs-operators/subject-behavior-subject/subject-behavior-subject.component';
 import { FormEventComponent } from './features/rxjs-operators/form-event/form-event.component';
+import { HowToComponent } from './features/how-to/how-to.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
