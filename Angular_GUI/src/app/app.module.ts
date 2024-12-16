@@ -35,6 +35,9 @@ import { BasicFormEventComponent } from './features/rxjs-operators/form-event/ba
 import { PluckComponent } from './features/rxjs-operators/pluck/pluck.component';
 import { PluckBasicTheoryComponent } from './features/rxjs-operators/pluck/pluck-basic-theory/pluck-basic-theory.component';
 import { BasicPluckComponent } from './features/rxjs-operators/pluck/basic-pluck/basic-pluck.component';
+import { ToArrayComponent } from './features/rxjs-operators/to-array/to-array.component';
+import { ToarrayBasicTheoryComponent } from './features/rxjs-operators/to-array/toarray-basic-theory/toarray-basic-theory.component';
+import { ToarrayBasicComponent } from './features/rxjs-operators/to-array/toarray-basic/toarray-basic.component';
 
 
 @NgModule({
@@ -68,7 +71,10 @@ import { BasicPluckComponent } from './features/rxjs-operators/pluck/basic-pluck
     BasicFormEventComponent,
     PluckComponent,
     PluckBasicTheoryComponent,
-    BasicPluckComponent
+    BasicPluckComponent,
+    ToArrayComponent,
+    ToarrayBasicTheoryComponent,
+    ToarrayBasicComponent
   ],
   imports: [
     BrowserModule,

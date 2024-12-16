@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <p *ngIf="counterValue.length <= 0 ">Please wait it's Loading...</p>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let counter of counterValue">{{counter}}</li>
+        </ul>
+    </div>
+</div>

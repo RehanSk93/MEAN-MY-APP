@@ -15,6 +15,7 @@ import { FormEventComponent } from './features/rxjs-operators/form-event/form-ev
 import { HowToComponent } from './features/how-to/how-to.component';
 import { PromiseComponent } from './features/rxjs-operators/promise/promise.component';
 import { PluckComponent } from './features/rxjs-operators/pluck/pluck.component';
+import { ToArrayComponent } from './features/rxjs-operators/to-array/to-array.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -38,6 +39,10 @@ const routes: Routes = [
       {
         path: 'pluck',
         component: PluckComponent,
+      },
+      {
+        path: 'toArray',
+        component: ToArrayComponent,
       },
     ],
   },
