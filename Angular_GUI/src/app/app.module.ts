@@ -32,6 +32,9 @@ import { BasicPromiseTheoryComponent } from './features/rxjs-operators/promise/b
 import { BasicPromiseComponent } from './features/rxjs-operators/promise/basic-promise/basic-promise.component';
 import { FormEventBasicTheoryComponent } from './features/rxjs-operators/form-event/form-event-basic-theory/form-event-basic-theory.component';
 import { BasicFormEventComponent } from './features/rxjs-operators/form-event/basic-form-event/basic-form-event.component';
+import { PluckComponent } from './features/rxjs-operators/pluck/pluck.component';
+import { PluckBasicTheoryComponent } from './features/rxjs-operators/pluck/pluck-basic-theory/pluck-basic-theory.component';
+import { BasicPluckComponent } from './features/rxjs-operators/pluck/basic-pluck/basic-pluck.component';
 
 
 @NgModule({
@@ -62,7 +65,10 @@ import { BasicFormEventComponent } from './features/rxjs-operators/form-event/ba
     BasicPromiseTheoryComponent,
     BasicPromiseComponent,
     FormEventBasicTheoryComponent,
-    BasicFormEventComponent
+    BasicFormEventComponent,
+    PluckComponent,
+    PluckBasicTheoryComponent,
+    BasicPluckComponent
   ],
   imports: [
     BrowserModule,
