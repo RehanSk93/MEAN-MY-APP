@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="d-grid">
+            <button type="button" class="btn btn-primary btn-block mb-2" (click)="callPromise(true)">Promise Resolved | true</button>
+            <button type="button" class="btn btn-info btn-block" (click)="callPromise(false)">Promise Reject | false</button>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-success" *ngIf="isResolved">
+            <strong>Success!</strong> {{promiseMessage}}
+        </div>
+        <div class="alert alert-danger" *ngIf="!isResolved">
+            <strong>Error!</strong> {{promiseMessage }}
+        </div>
+    </div>
+</div>

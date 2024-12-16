@@ -27,6 +27,9 @@ import { ChildOneComponent } from './features/rxjs-operators/subject-behavior-su
 import { ChildTwoComponent } from './features/rxjs-operators/subject-behavior-subject/basic-subject/child-two/child-two.component';
 import { ChildThreeComponent } from './features/rxjs-operators/subject-behavior-subject/basic-subject/child-three/child-three.component';
 import { RxjsBasicTheoryComponent } from './features/rxjs-operators/subject-behavior-subject/rxjs-basic-theory/rxjs-basic-theory.component';
+import { PromiseComponent } from './features/rxjs-operators/promise/promise.component';
+import { BasicPromiseTheoryComponent } from './features/rxjs-operators/promise/basic-promise-theory/basic-promise-theory.component';
+import { BasicPromiseComponent } from './features/rxjs-operators/promise/basic-promise/basic-promise.component';
 
 
 @NgModule({
@@ -52,7 +55,10 @@ import { RxjsBasicTheoryComponent } from './features/rxjs-operators/subject-beha
     ChildOneComponent,
     ChildTwoComponent,
     ChildThreeComponent,
-    RxjsBasicTheoryComponent
+    RxjsBasicTheoryComponent,
+    PromiseComponent,
+    BasicPromiseTheoryComponent,
+    BasicPromiseComponent
   ],
   imports: [
     BrowserModule,

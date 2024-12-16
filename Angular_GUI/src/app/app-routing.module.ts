@@ -13,6 +13,7 @@ import { RxjsOperatorsComponent } from './features/rxjs-operators/rxjs-operators
 import { SubjectBehaviorSubjectComponent } from './features/rxjs-operators/subject-behavior-subject/subject-behavior-subject.component';
 import { FormEventComponent } from './features/rxjs-operators/form-event/form-event.component';
 import { HowToComponent } from './features/how-to/how-to.component';
+import { PromiseComponent } from './features/rxjs-operators/promise/promise.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path: 'form-event',
         component: FormEventComponent,
+      },
+      {
+        path: 'promise',
+        component: PromiseComponent,
       },
     ],
   },
