@@ -38,6 +38,9 @@ import { BasicPluckComponent } from './features/rxjs-operators/pluck/basic-pluck
 import { ToArrayComponent } from './features/rxjs-operators/to-array/to-array.component';
 import { ToarrayBasicTheoryComponent } from './features/rxjs-operators/to-array/toarray-basic-theory/toarray-basic-theory.component';
 import { ToarrayBasicComponent } from './features/rxjs-operators/to-array/toarray-basic/toarray-basic.component';
+import { DirectiveBasicTheoryComponent } from './features/angular-directives/directive-basic-theory/directive-basic-theory.component';
+import { DirectiveExampleOneComponent } from './features/angular-directives/directive-example-one/directive-example-one.component';
+import { HighlightDirective } from './features/angular-directives/directive-example-one/highlight.directive';
 
 
 @NgModule({
@@ -74,7 +77,10 @@ import { ToarrayBasicComponent } from './features/rxjs-operators/to-array/toarra
     BasicPluckComponent,
     ToArrayComponent,
     ToarrayBasicTheoryComponent,
-    ToarrayBasicComponent
+    ToarrayBasicComponent,
+    DirectiveBasicTheoryComponent,
+    DirectiveExampleOneComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
