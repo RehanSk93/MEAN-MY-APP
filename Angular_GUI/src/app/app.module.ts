@@ -30,6 +30,8 @@ import { RxjsBasicTheoryComponent } from './features/rxjs-operators/subject-beha
 import { PromiseComponent } from './features/rxjs-operators/promise/promise.component';
 import { BasicPromiseTheoryComponent } from './features/rxjs-operators/promise/basic-promise-theory/basic-promise-theory.component';
 import { BasicPromiseComponent } from './features/rxjs-operators/promise/basic-promise/basic-promise.component';
+import { FormEventBasicTheoryComponent } from './features/rxjs-operators/form-event/form-event-basic-theory/form-event-basic-theory.component';
+import { BasicFormEventComponent } from './features/rxjs-operators/form-event/basic-form-event/basic-form-event.component';
 
 
 @NgModule({
@@ -58,7 +60,9 @@ import { BasicPromiseComponent } from './features/rxjs-operators/promise/basic-p
     RxjsBasicTheoryComponent,
     PromiseComponent,
     BasicPromiseTheoryComponent,
-    BasicPromiseComponent
+    BasicPromiseComponent,
+    FormEventBasicTheoryComponent,
+    BasicFormEventComponent
   ],
   imports: [
     BrowserModule,
