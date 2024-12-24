@@ -28,19 +28,26 @@ import { ChildTwoComponent } from './features/rxjs-operators/subject-behavior-su
 import { ChildThreeComponent } from './features/rxjs-operators/subject-behavior-subject/basic-subject/child-three/child-three.component';
 import { RxjsBasicTheoryComponent } from './features/rxjs-operators/subject-behavior-subject/rxjs-basic-theory/rxjs-basic-theory.component';
 import { PromiseComponent } from './features/rxjs-operators/promise/promise.component';
-import { BasicPromiseTheoryComponent } from './features/rxjs-operators/promise/basic-promise-theory/basic-promise-theory.component';
-import { BasicPromiseComponent } from './features/rxjs-operators/promise/basic-promise/basic-promise.component';
-import { FormEventBasicTheoryComponent } from './features/rxjs-operators/form-event/form-event-basic-theory/form-event-basic-theory.component';
-import { BasicFormEventComponent } from './features/rxjs-operators/form-event/basic-form-event/basic-form-event.component';
+import { BasicPromiseTheoryComponent } from './features/rxjs-operators/promise/promise-theory/basic-promise-theory.component';
+import { BasicPromiseComponent } from './features/rxjs-operators/promise/promise-example-one/basic-promise.component';
+import { FormEventBasicTheoryComponent } from './features/rxjs-operators/form-event/form-event-theory/form-event-basic-theory.component';
+import { BasicFormEventComponent } from './features/rxjs-operators/form-event/form-event-example-one/basic-form-event.component';
 import { PluckComponent } from './features/rxjs-operators/pluck/pluck.component';
-import { PluckBasicTheoryComponent } from './features/rxjs-operators/pluck/pluck-basic-theory/pluck-basic-theory.component';
-import { BasicPluckComponent } from './features/rxjs-operators/pluck/basic-pluck/basic-pluck.component';
+import { PluckBasicTheoryComponent } from './features/rxjs-operators/pluck/pluck-theory/pluck-basic-theory.component';
+import { BasicPluckComponent } from './features/rxjs-operators/pluck/pluck-example-one/basic-pluck.component';
 import { ToArrayComponent } from './features/rxjs-operators/to-array/to-array.component';
-import { ToarrayBasicTheoryComponent } from './features/rxjs-operators/to-array/toarray-basic-theory/toarray-basic-theory.component';
-import { ToarrayBasicComponent } from './features/rxjs-operators/to-array/toarray-basic/toarray-basic.component';
+import { ToarrayBasicTheoryComponent } from './features/rxjs-operators/to-array/toarray-theory/toarray-basic-theory.component';
+import { ToarrayBasicComponent } from './features/rxjs-operators/to-array/toarray-example-one/toarray-basic.component';
 import { DirectiveBasicTheoryComponent } from './features/angular-directives/directive-basic-theory/directive-basic-theory.component';
 import { DirectiveExampleOneComponent } from './features/angular-directives/directive-example-one/directive-example-one.component';
 import { HighlightDirective } from './features/angular-directives/directive-example-one/highlight.directive';
+import { MapComponent } from './features/rxjs-operators/map/map.component';
+import { MapTheoryComponent } from './features/rxjs-operators/map/map-theory/map-theory.component';
+import { MapExampleOneComponent } from './features/rxjs-operators/map/map-example-one/map-example-one.component';
+import { MapExampleTwoComponent } from './features/rxjs-operators/map/map-example-two/map-example-two.component';
+import { FilterComponent } from './features/rxjs-operators/filter/filter.component';
+import { FilterTheoryComponent } from './features/rxjs-operators/filter/filter-theory/filter-theory.component';
+import { FilterExampleOneComponent } from './features/rxjs-operators/filter/filter-example-one/filter-example-one.component';
 
 
 @NgModule({
@@ -80,7 +87,14 @@ import { HighlightDirective } from './features/angular-directives/directive-exam
     ToarrayBasicComponent,
     DirectiveBasicTheoryComponent,
     DirectiveExampleOneComponent,
-    HighlightDirective
+    HighlightDirective,
+    MapComponent,
+    MapTheoryComponent,
+    MapExampleOneComponent,
+    MapExampleTwoComponent,
+    FilterComponent,
+    FilterTheoryComponent,
+    FilterExampleOneComponent
   ],
   imports: [
     BrowserModule,

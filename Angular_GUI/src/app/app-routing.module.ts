@@ -16,6 +16,8 @@ import { HowToComponent } from './features/how-to/how-to.component';
 import { PromiseComponent } from './features/rxjs-operators/promise/promise.component';
 import { PluckComponent } from './features/rxjs-operators/pluck/pluck.component';
 import { ToArrayComponent } from './features/rxjs-operators/to-array/to-array.component';
+import { MapComponent } from './features/rxjs-operators/map/map.component';
+import { FilterComponent } from './features/rxjs-operators/filter/filter.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -43,6 +45,14 @@ const routes: Routes = [
       {
         path: 'toArray',
         component: ToArrayComponent,
+      },
+      {
+        path: 'map',
+        component: MapComponent,
+      },
+      {
+        path: 'filter',
+        component: FilterComponent,
       },
     ],
   },
